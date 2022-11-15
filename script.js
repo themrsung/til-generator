@@ -5,9 +5,11 @@ function generateTIL() {
     //     type: "POST",
     //     url: "~/app.py",
     //     data: {param: text}
-    // }).done(function(sentences) {
-        
+    // }).done(function(o) {
+    //     result = run(sentences)
     // })
 
-    document.getElementById("output").innerHTML = sentences
+    var result =
+
+    document.getElementById("output").innerHTML = result
 }
