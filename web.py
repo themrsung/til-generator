@@ -7,9 +7,9 @@ import til_generator
 def home():
     return render_template("index.html")
 
-@app.route("/til", methods=["GET"])
+@app.route("/til", methods=["POST"])
 def get_TIL():
-    sentences_receive = request.args.get("sentences_give")
+    sentences_receive = request.form["sentences_give"]
     result = til_generator.run(int(sentences_receive))
     return jsonify({"TIL" : result})
 

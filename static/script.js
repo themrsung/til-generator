@@ -1,16 +1,18 @@
 function generateTIL() {
-    var sentences = Number(document.getElementById("sentences").value)
+    var sentences = document.getElementById("sentences").value
 
-    var result = error
+    if (sentences < 1) {
+        document.getElementById("output").innerHTML = "1 이상의 정수를 입력해주세요."
+        return
+    }
 
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "/til",
         data: {sentences_give : sentences},
         success: function(response) {
-            result = response["TIL"]
+            document.getElementById("output").innerHTML = response["TIL"]
+            console.log("t")
         }
     })
-
-    document.getElementById("output").innerHTML = result
 }
