@@ -3,11 +3,11 @@
 import random
 from pyjosa.josa import Josa
 
-prefixes = open("prefixes.txt", "r", encoding="UTF-8").readlines()
-adjectives = open("adjectives.txt", "r", encoding="UTF-8").readlines()
-words = open("words.txt", "r", encoding="UTF-8").readlines()
-adverbs = open("adverbs.txt", "r", encoding="UTF-8").readlines()
-suffixes = open("suffixes.txt", "r", encoding="UTF-8").readlines()
+prefixes = open("text/prefixes.txt", "r", encoding="UTF-8").readlines()
+adjectives = open("text/adjectives.txt", "r", encoding="UTF-8").readlines()
+words = open("text/words.txt", "r", encoding="UTF-8").readlines()
+adverbs = open("text/adverbs.txt", "r", encoding="UTF-8").readlines()
+suffixes = open("text/suffixes.txt", "r", encoding="UTF-8").readlines()
 
 for i in range(len(prefixes)):
     prefixes[i] = prefixes[i].strip()
@@ -42,12 +42,15 @@ def generate_til():
 
     return til
 
-number_of_sentences = input("몇 문장을 원하시나요?")
+def run():
+    number_of_sentences = input("몇 문장을 원하시나요?")
 
-value = ""
-for i in range(int(number_of_sentences)):
-    value += generate_til()
-    value += " "
-value = value[:-1]
+    value = ""
+    for i in range(int(number_of_sentences)):
+        value += generate_til()
+        value += " "
+    value = value[:-1]
 
-print(value)
+    print(value)
+
+run()
