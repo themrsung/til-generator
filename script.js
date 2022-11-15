@@ -1,15 +1,16 @@
 function generateTIL() {
     var sentences = Number(document.getElementById("sentences").value)
 
-    // $.ajax({
-    //     type: "POST",
-    //     url: "~/app.py",
-    //     data: {param: text}
-    // }).done(function(o) {
-    //     result = run(sentences)
-    // })
+    var result = error
 
-    var result =
+    $.ajax({
+        type: "GET",
+        url: "/til",
+        data: {sentences_give : sentences},
+        success: function(response) {
+            result = respone["TIL"]
+        }
+    })
 
     document.getElementById("output").innerHTML = result
 }

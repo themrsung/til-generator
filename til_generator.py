@@ -3,8 +3,6 @@
 import random
 from pyjosa.josa import Josa
 
-import http
-
 prefixes = open("text/prefixes.txt", "r", encoding="UTF-8").readlines()
 adjectives = open("text/adjectives.txt", "r", encoding="UTF-8").readlines()
 words = open("text/words.txt", "r", encoding="UTF-8").readlines()
