@@ -1,0 +1,41 @@
+# TIL Generator
+
+import random
+from pyjosa.josa import Josa
+
+prefixes = open("prefixes.txt", "r", encoding="UTF-8").readlines()
+words = open("words.txt", "r", encoding="UTF-8").readlines()
+suffixes = open("suffixes.txt", "r", encoding="UTF-8").readlines()
+
+for i in range(len(prefixes)):
+    prefixes[i] = prefixes[i].strip()
+    
+for i in range(len(words)):
+    words[i] = words[i].strip()
+    
+for i in range(len(suffixes)):
+    suffixes[i] = suffixes[i].strip()
+
+def generate_til():
+    til = ""
+
+    til += prefixes[random.randrange(0, len(prefixes))]
+    til += " "
+    word =  words[random.randrange(0, len(words))]
+    til += word
+    til += Josa.get_josa(word, "을")
+    til += " "
+    til += suffixes[random.randrange(0, len(suffixes))]
+    til += "."
+
+    return til
+
+number_of_sentences = input("몇 문장을 원하시나요?")
+
+value = ""
+for i in range(int(number_of_sentences)):
+    value += generate_til()
+    value += " "
+value = value[:-1]
+
+print(value)
