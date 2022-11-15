@@ -42,8 +42,6 @@ def generate_til():
 
     return til
 
-number_of_sentences = input("몇 문장을 원하시나요?")
-
 def run(num):
     value = ""
     for i in range(int(num)):
@@ -52,4 +50,3 @@ def run(num):
     value = value[:-1]
     return value
 
-print(run(number_of_sentences))

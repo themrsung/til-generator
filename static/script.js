@@ -8,7 +8,7 @@ function generateTIL() {
         url: "/til",
         data: {sentences_give : sentences},
         success: function(response) {
-            result = respone["TIL"]
+            result = response["TIL"]
         }
     })
 
