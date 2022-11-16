@@ -3,7 +3,7 @@
 실행 방법:
 - Windows
 
-다운로드 받고 run.cmd 실행 (알아서 HTML 페이지로 넘어갑니다)
+다운로드 받고 __main\__.py 실행 (알아서 HTML 페이지로 넘어갑니다)
 - Other
 
 알아서 web.py 켜고 localhost:5000
