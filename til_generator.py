@@ -27,15 +27,24 @@ for i in range(len(suffixes)):
 def generate_til():
     til = ""
 
+    add_adjective = bool(random.randrange(0, 2))
+    add_adverb = bool(random.randrange(0, 2))
+
     til += prefixes[random.randrange(0, len(prefixes))]
     til += " "
-    til += adjectives[random.randrange(0, len(adjectives))]
-    til += " "
+    
+    if add_adjective:
+        til += adjectives[random.randrange(0, len(adjectives))]
+        til += " "
+
     word =  words[random.randrange(0, len(words))]
     til += word
     til += Josa.get_josa(word, "을")
-    til += " "
-    til += adverbs[random.randrange(0, len(adverbs))]
+
+    if add_adverb:
+        til += " "
+        til += adverbs[random.randrange(0, len(adverbs))]
+
     til += " "
     til += suffixes[random.randrange(0, len(suffixes))]
     til += "."
