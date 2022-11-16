@@ -247,18 +247,12 @@
    'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL '
    'Generator\\build\\app\\base_library.zip',
    'DATA'),
+  ('text\\adjectives.txt',
+   'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL '
+   'Generator\\text\\adjectives.txt',
+   'DATA'),
   ('static\\style.css',
    'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL Generator\\static\\style.css',
-   'DATA'),
-  ('static\\script.js',
-   'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL Generator\\static\\script.js',
-   'DATA'),
-  ('templates\\index.html',
-   'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL '
-   'Generator\\templates\\index.html',
-   'DATA'),
-  ('text\\adverbs.txt',
-   'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL Generator\\text\\adverbs.txt',
    'DATA'),
   ('text\\words.txt',
    'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL Generator\\text\\words.txt',
@@ -266,10 +260,16 @@
   ('text\\prefixes.txt',
    'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL Generator\\text\\prefixes.txt',
    'DATA'),
-  ('text\\adjectives.txt',
-   'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL '
-   'Generator\\text\\adjectives.txt',
+  ('text\\adverbs.txt',
+   'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL Generator\\text\\adverbs.txt',
    'DATA'),
   ('text\\suffixes.txt',
    'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL Generator\\text\\suffixes.txt',
+   'DATA'),
+  ('templates\\index.html',
+   'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL '
+   'Generator\\templates\\index.html',
+   'DATA'),
+  ('static\\script.js',
+   'C:\\Users\\themr\\OneDrive\\문서\\Coding\\TIL Generator\\static\\script.js',
    'DATA')],)

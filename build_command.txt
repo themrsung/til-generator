@@ -1,0 +1,1 @@
+python -m PyInstaller --add-data "text;text" --add-data "templates;templates" --add-data "static;static" app.py
