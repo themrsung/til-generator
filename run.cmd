@@ -1,5 +1,5 @@
 echo off
-pip install pyjosa
+python -m pip install pyjosa
 color 0a
 cls
 start cmd.exe @cmd /k "python web.py"
