@@ -1,0 +1,33 @@
+<title>TIL Generator</title>
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../static/script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <?php echo shell_exec("python app.py")?>
+</head>
+<body>
+    <div class="header">
+        <h1>TIL Generator</h1>
+    </div>
+    <div class="wrap">
+        <div class="content-box input-area">
+            <h3>몇 문장이나 필요하신가요?</h3>
+            <div class="input-box">
+                <input type="number" id="sentences">
+                <button class="generate-button" onclick="generateTIL()">생성하기</button>
+            </div>
+        </div>
+        <div class="content-box output-area">
+            <p id="output">Output</p>
+        </div>
+        <div class="content-box credits">
+            <a href="https://github.com/themrsung/til-generator">Source Code</a>
+        </div>
+    </div>
+
+</body>

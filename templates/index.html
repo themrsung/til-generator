@@ -1,12 +1,14 @@
 <title>TIL Generator</title>
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <script type="text/javascript" src="../static/script.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <?php echo shell_exec("python app.py")?>
 </head>
 <body>
     <div class="header">
