@@ -10,7 +10,7 @@ def home():
 @app.route("/til", methods=["POST"])
 def get_TIL():
     sentences_receive = request.form["sentences_give"]
-    result = til_generator.run(int(sentences_receive))
+    result = til_generator.run(int(sentences_receive), True)
     return jsonify({"TIL" : result})
 
 if __name__ == '__main__':

@@ -32,7 +32,7 @@ def generate_til():
 
     til += prefixes[random.randrange(0, len(prefixes))]
     til += " "
-    
+
     if add_adjective:
         til += adjectives[random.randrange(0, len(adjectives))]
         til += " "
@@ -51,11 +51,23 @@ def generate_til():
 
     return til
 
-def run(num):
+def run(num, is_html):
     value = ""
     for i in range(int(num)):
         value += generate_til()
-        value += " "
-    value = value[:-1]
+        if (i + 1) % 15 == 0:
+            if is_html:
+                value += "</p><p>"
+            else:
+                value += "\n"
+        else:
+            value += " "
+
+    if value[-2:] == "\n":
+        value = value[:-2]
+    elif value[-7:] == "</p><p>":
+        value = value[:-7]
+    else:
+        value = value[:-1]
     return value
 
