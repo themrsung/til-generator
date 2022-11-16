@@ -13,6 +13,8 @@ def get_TIL():
     sentences_receive = request.form["sentences_give"]
     if int(sentences_receive) > 10000:
         return jsonify({"TIL": "10,000문장 초과하시면 안됩니다!!!"})
+    elif int(sentences_receive) < 1:
+        return jsonify({"TIL": "1문장 미만은 안됩니다,,,"})
     result = til_generator.run(int(sentences_receive), True)
     return jsonify({"TIL" : result})
 
