@@ -70,4 +70,3 @@ def run(num, is_html):
     else:
         value = value[:-1]
     return value
-
