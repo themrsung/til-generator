@@ -4,8 +4,6 @@ app = Flask(__name__)
 import til_generator
 import webbrowser
 
-import math
-
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -13,12 +11,12 @@ def home():
 @app.route("/til", methods=["POST"])
 def get_TIL():
     sentences_receive = request.form["sentences_give"]
-    if int(sentences_receive) > 10000:
+    if float(sentences_receive) % 1 != 0:
+        return jsonify({"TIL": "쓸데없는 숫자 입력하지 마세요."})
+    elif int(sentences_receive) > 10000:
         return jsonify({"TIL": "10,000문장 초과하시면 안됩니다!!!"})
     elif int(sentences_receive) < 1:
         return jsonify({"TIL": "1문장 미만은 안됩니다,,,"})
-    elif math.floor(float(sentences_receive)) != float(sentences_receive):
-        return jsonify({"TIL": "쓸데없는 숫자 넣지 마세요."})
 
     result = til_generator.run(int(sentences_receive), True)
     return jsonify({"TIL" : result})
